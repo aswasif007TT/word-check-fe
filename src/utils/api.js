@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_HOST,
@@ -7,4 +7,5 @@ const api = axios.create({
   },
 });
 
+export { AxiosError };
 export default api;
