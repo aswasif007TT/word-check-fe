@@ -3,6 +3,8 @@ FROM node:18-alpine as builder
 WORKDIR /app
 COPY .. .
 RUN npm ci
+ARG REACT_APP_API_HOST
+ENV REACT_APP_API_HOST=${REACT_APP_API_HOST}
 RUN npm run build
 
 # Bundle static files with nginx
