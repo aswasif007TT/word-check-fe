@@ -1,6 +1,6 @@
 ## Description
 
-This is the React based frontend app which checks a sentence for non-english words. This is bootstrapped with create-react-app
+This is the React based frontend app which checks a sentence for non-english words. This is bootstrapped with create-react-app.
 
 ## Installation
 
