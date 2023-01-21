@@ -19,7 +19,7 @@ export default function ResultPanel({ words }: ResultPanelProps) {
     <div className="mt-6">
       <hr className="mb-3" />
       <label className="block text-green-700 text-lg font-bold mb-2">
-        No non English words found.
+        No non English word found.
       </label>
     </div>
   );
