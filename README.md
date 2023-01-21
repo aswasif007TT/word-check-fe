@@ -10,8 +10,9 @@ Recommended way is to pull the [word-check-localdev](https://github.com/aswasif0
 mkdir ~/word-check
 cd ~/word-check
 git clone https://github.com/aswasif007TT/word-check-localdev
+cd word-check-localdev
 bash ./install.sh
-docker compose up app api
+docker compose up app
 ```
 
 You can try out the nginx production build of the app using the following command:
