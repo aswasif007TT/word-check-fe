@@ -20,9 +20,13 @@ function App() {
         setNonEnglishWords(response.data.invalidWords);
         setError("");
       } catch (error) {
-        const serverError = error as AxiosError;
-        const data: any = serverError.response?.data;
-        setError(data.message);
+        if (error instanceof AxiosError) {
+          const serverError = error as AxiosError;
+          const data: any = serverError.response?.data;
+          setError(data.message);
+        } else {
+          setError("Something went wrong");
+        }
       }
     },
     []
