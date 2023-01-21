@@ -5,9 +5,9 @@ import ResultPanel from "./components/ResultPanel";
 import "./App.css";
 
 function App() {
-  const [error, setError] = React.useState<string | undefined>();
+  const [error, setError] = React.useState<string | null>();
   const [nonEnglishWords, setNonEnglishWords] = React.useState<
-    string[] | undefined
+    string[] | null
   >();
 
   const handleSubmit = useCallback(
@@ -18,8 +18,10 @@ function App() {
       try {
         const response = await api.post("/check-sentence", data);
         setNonEnglishWords(response.data.invalidWords);
-        setError("");
+        setError(null);
       } catch (error) {
+        setNonEnglishWords(null);
+
         if (error instanceof AxiosError) {
           const serverError = error as AxiosError;
           const data: any = serverError.response?.data;
