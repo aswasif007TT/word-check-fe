@@ -14,6 +14,11 @@ bash ./install.sh
 docker compose up app api
 ```
 
+You can try out the nginx production build of the app using the following command:
+```bash
+docker compose up app-nginx
+```
+
 ## Architecture
 
 We have bootstrapped this app with create-react-app and typescript. We are also using tailwind css.
